@@ -1,0 +1,99 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Simplicial.jl\n\n\nSimplicial\n is a \nJulia\n package for manipulating simplicial complexes and topological data analysis (TDA). The package defines types for \nCombinatorial Codes\n, \nSimplicial Complexes\n, \nFiltered Simplicial Complexes\n, and \nDirected Complexes\n.\n\n\n\n\nPackage Overview\n\n\n\n\nCombinatorial Codes\n\n\nAbstract Simplicial Complexes\n\n\nSimplicial Complexes\n\n\nFiltered Simplicial Complexes\n\n\n\n\n\n\nDirected Complexes\n\n\nCombinatorial Codes\n\n\nSimplicial Complexes\n\n\nFiltered Simplicial Complexes", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#simplicialjl", 
+            "text": "Simplicial  is a  Julia  package for manipulating simplicial complexes and topological data analysis (TDA). The package defines types for  Combinatorial Codes ,  Simplicial Complexes ,  Filtered Simplicial Complexes , and  Directed Complexes .", 
+            "title": "Simplicial.jl"
+        }, 
+        {
+            "location": "/#package-overview", 
+            "text": "Combinatorial Codes  Abstract Simplicial Complexes  Simplicial Complexes  Filtered Simplicial Complexes    Directed Complexes  Combinatorial Codes  Simplicial Complexes  Filtered Simplicial Complexes", 
+            "title": "Package Overview"
+        }, 
+        {
+            "location": "/man/combinatorialcodes/", 
+            "text": "Combinatorial Codes\n\n\nDefinition:\n A \ncombinatorial code\n $C$ is a collection $C \\subseteq 2^{[n]}$ of \ncodewords\n, subsets of $[n] = {1,\\dots,n}$. Generally, no further structure is assumed.\n\n\nCombinatorial codes are represented in \nSimplicial\n using the \nCombinatorialCode\n type.\n\n\njulia\n C = CombinatorialCode([[],[1],[1,2],[2,3]]);\n\njulia\n show(C)\nThis is a code on 3 vertices: 1 2 3\nThe code consists of 4 words:\n______________________________\nemptyset\n1\n1 2\n2 3", 
+            "title": "Combinatorial Codes"
+        }, 
+        {
+            "location": "/man/combinatorialcodes/#combinatorial-codes", 
+            "text": "Definition:  A  combinatorial code  $C$ is a collection $C \\subseteq 2^{[n]}$ of  codewords , subsets of $[n] = {1,\\dots,n}$. Generally, no further structure is assumed.  Combinatorial codes are represented in  Simplicial  using the  CombinatorialCode  type.  julia  C = CombinatorialCode([[],[1],[1,2],[2,3]]);\n\njulia  show(C)\nThis is a code on 3 vertices: 1 2 3\nThe code consists of 4 words:\n______________________________\nemptyset\n1\n1 2\n2 3", 
+            "title": "Combinatorial Codes"
+        }, 
+        {
+            "location": "/man/simplicialcomplexes/", 
+            "text": "Abstract Simplicial Complexes\n\n\nThis package provides types for \nSimplicial Complexes\n and \nFiltered Simplicial Complexes\n.\n\n\n\n\nSimplicial Complexes\n\n\nDefinition:\n A \nsimplicial complex\n $(V,\\Delta)$ is a finite set $V$, called the \nvertex set\n, together with a collection $\\Delta \\subseteq 2^{V}$ which is closed under subsets, i.e. if $\\sigma \\subseteq \\tau \\subseteq V$ are sets, and $\\tau \\in \\Delta$, then $\\sigma \\in \\Delta$. Typically $(V,D)$ is simply denoted $\\Delta$ as the vertex set is often understood. Note this definition allows \"false vertices\", i.e. vertices $v \\in V$ such that ${v}\\not\\in \\Delta$.\n\n\nSimplicial complexes are represented in \nSimplicial\n with the \nSimplicialComplex\n type.\n\n\njulia\n K = SimplicialComplex([[1,2,3],[2,4],[3,4]]);\n\njulia\n show(K)\nA 2-dimensional simplicial complex on 4 vertices 1 2 3 4\nThis complex has 3 facets:\nArray{Int16,1}[Int16[2, 4], Int16[3, 4], Int16[1, 2, 3]]\n\n\n\n\n\n\nFiltered Simplicial Complexes\n\n\nA \nfiltered simplicial complex\n $(\\Delta,f)$ is a simplicial complex $\\Delta$ together with a \nfiltration function\n $f : \\Delta \\to R$ which is monotone, i.e. if $\\sigma \\subseteq \\tau \\in \\Delta$, then $f(\\sigma) \\le f(\\tau)$. Equivalently, a filtered simplicial complex is a sequence\n\n\n\n\n\n\\Delta_0 \\subseteq \\Delta_1 \\subseteq \\cdots \\subseteq \\Delta_t\n\n\n\n\n\nof simplicial complexes.", 
+            "title": "Simplicial Complexes"
+        }, 
+        {
+            "location": "/man/simplicialcomplexes/#abstract-simplicial-complexes", 
+            "text": "This package provides types for  Simplicial Complexes  and  Filtered Simplicial Complexes .", 
+            "title": "Abstract Simplicial Complexes"
+        }, 
+        {
+            "location": "/man/simplicialcomplexes/#simplicial-complexes", 
+            "text": "Definition:  A  simplicial complex  $(V,\\Delta)$ is a finite set $V$, called the  vertex set , together with a collection $\\Delta \\subseteq 2^{V}$ which is closed under subsets, i.e. if $\\sigma \\subseteq \\tau \\subseteq V$ are sets, and $\\tau \\in \\Delta$, then $\\sigma \\in \\Delta$. Typically $(V,D)$ is simply denoted $\\Delta$ as the vertex set is often understood. Note this definition allows \"false vertices\", i.e. vertices $v \\in V$ such that ${v}\\not\\in \\Delta$.  Simplicial complexes are represented in  Simplicial  with the  SimplicialComplex  type.  julia  K = SimplicialComplex([[1,2,3],[2,4],[3,4]]);\n\njulia  show(K)\nA 2-dimensional simplicial complex on 4 vertices 1 2 3 4\nThis complex has 3 facets:\nArray{Int16,1}[Int16[2, 4], Int16[3, 4], Int16[1, 2, 3]]", 
+            "title": "Simplicial Complexes"
+        }, 
+        {
+            "location": "/man/simplicialcomplexes/#filtered-simplicial-complexes", 
+            "text": "A  filtered simplicial complex  $(\\Delta,f)$ is a simplicial complex $\\Delta$ together with a  filtration function  $f : \\Delta \\to R$ which is monotone, i.e. if $\\sigma \\subseteq \\tau \\in \\Delta$, then $f(\\sigma) \\le f(\\tau)$. Equivalently, a filtered simplicial complex is a sequence   \n\\Delta_0 \\subseteq \\Delta_1 \\subseteq \\cdots \\subseteq \\Delta_t   of simplicial complexes.", 
+            "title": "Filtered Simplicial Complexes"
+        }, 
+        {
+            "location": "/man/directedcomplexes/", 
+            "text": "Directed Complexes\n\n\nDefinition:\n A \ndirected complex\n $(V, D)$ is a finite set $V$, called the \nvertex set\n, together with a collection $D$ of \"proper sequences\" on $V$, closed under taking subsequences. A \"proper sequence\" is a a sequence $(v_1,v_2,\\dots,v_k)$ with $v_i \\in V$ and no $v_i$s repeated. The closure property says that if $s = (v_1,\\dots,v_k) \\in D$, then every subsequence of $s$ is also in $D$.", 
+            "title": "Directed Complexes"
+        }, 
+        {
+            "location": "/man/directedcomplexes/#directed-complexes", 
+            "text": "Definition:  A  directed complex  $(V, D)$ is a finite set $V$, called the  vertex set , together with a collection $D$ of \"proper sequences\" on $V$, closed under taking subsequences. A \"proper sequence\" is a a sequence $(v_1,v_2,\\dots,v_k)$ with $v_i \\in V$ and no $v_i$s repeated. The closure property says that if $s = (v_1,\\dots,v_k) \\in D$, then every subsequence of $s$ is also in $D$.", 
+            "title": "Directed Complexes"
+        }, 
+        {
+            "location": "/lib/combinatorialcodes/", 
+            "text": "Combinatorial Codes\n\n\nThis is an incomplete list of methods available for manipulating \nCombinatorialCode\ns\n\n\n#\n\n\nSimplicial.BitArrayOfACombinatorialCode\n \n \nType\n.\n\n\nBitArrayOfACombinatorialCode is a different representation of a CombinatorialCode\n\n\nsource\n\n\n#\n\n\nSimplicial.BitArrayOfACombinatorialCode\n \n \nMethod\n.\n\n\nBitArrayOfACombinatorialCode(C::CombinatorialCode)::BitArrayOfACombinatorialCode\nThis function converts the CombinatorialCode representation to the BitArrayOfACombinatorialCode representation\n\n\n\n\nsource\n\n\n#\n\n\nSimplicial.CombinatorialCode\n \n \nMethod\n.\n\n\nCombinatorialCode(BinaryMatrix::BitArray{2})::CombinatorialCode This function takes a binary matrix and interprets it as a combinatorial code, so that each row is interpreted as a codeword.\n\n\nsource\n\n\n#\n\n\nBase.transpose\n \n \nMethod\n.\n\n\nThis function takes a combinatorial code and computes \nthe transpose of a code\n Usage: C1=transpose(C) or, (same result)        C1=C'\n\n\nsource\n\n\n#\n\n\nSimplicial.BernoulliRandomCode\n \n \nMethod\n.\n\n\nfunction BernoulliRandomCode(N,Nwords,p)::CombinatorialCode This function creates a boolean N x Nwords matrix of i.i.d. Bernoulli entries with probalbility p and then passes the appropriate sets to the constructor of the CombinatorialCode type\n\n\nsource\n\n\n#\n\n\nSimplicial.CanonicalForm\n \n \nType\n.\n\n\nCanonicalForm is a type used for encoding canonical forms. It is a 1-dimensional array of pseudomonomials\n\n\nsource\n\n\n#\n\n\nSimplicial.CanonicalForm\n \n \nMethod\n.\n\n\n CanonicalForm(C::CombinatorialCode)::CanonicalForm\n This computes the canonical form of a neural ideal for the combinatorial code C\n Example Usage:   CF=CanonicalForm(C)\n\n\n\n\nsource\n\n\n#\n\n\nSimplicial.PseudoMonomial\n \n \nType\n.\n\n\nPseudoMonomial is a type for encoding pseudomonomials  \n\n\nsource\n\n\n#\n\n\nSimplicial.SmallIntegerType\n \n \nType\n.\n\n\nbelow are constants used in the canonical form computation. In the future, these will be obsolete\n\n\nsource\n\n\n#\n\n\nSimplicial.Code2CF\n \n \nMethod\n.\n\n\nThis computes the canonical form of a neural ideal for the combinatorial code C, represented by a bit array  whose rows are codewords.       The algorithm is an optimized Julia language  version of the matlab code in https://github.com/nebneuron/neural-ideal/blob/master/Code2CF.m       that was originally written  by Nora Youngs.       For more information about the neural ideal and its uses, see e.g. the paper about the neural ring http://arxiv.org/abs/1212.4201\n\n\nsource\n\n\n#\n\n\nSimplicial.PseudoMonomialType\n \n \nMethod\n.\n\n\nfunction PseudoMonomialType(p::PseudoMonomial)::Int This function returns the type of a pseudomonomial according to the classification in the neural ring paper\n\n\nsource", 
+            "title": "CombinatorialCode"
+        }, 
+        {
+            "location": "/lib/combinatorialcodes/#combinatorial-codes", 
+            "text": "This is an incomplete list of methods available for manipulating  CombinatorialCode s  #  Simplicial.BitArrayOfACombinatorialCode     Type .  BitArrayOfACombinatorialCode is a different representation of a CombinatorialCode  source  #  Simplicial.BitArrayOfACombinatorialCode     Method .  BitArrayOfACombinatorialCode(C::CombinatorialCode)::BitArrayOfACombinatorialCode\nThis function converts the CombinatorialCode representation to the BitArrayOfACombinatorialCode representation  source  #  Simplicial.CombinatorialCode     Method .  CombinatorialCode(BinaryMatrix::BitArray{2})::CombinatorialCode This function takes a binary matrix and interprets it as a combinatorial code, so that each row is interpreted as a codeword.  source  #  Base.transpose     Method .  This function takes a combinatorial code and computes  the transpose of a code  Usage: C1=transpose(C) or, (same result)        C1=C'  source  #  Simplicial.BernoulliRandomCode     Method .  function BernoulliRandomCode(N,Nwords,p)::CombinatorialCode This function creates a boolean N x Nwords matrix of i.i.d. Bernoulli entries with probalbility p and then passes the appropriate sets to the constructor of the CombinatorialCode type  source  #  Simplicial.CanonicalForm     Type .  CanonicalForm is a type used for encoding canonical forms. It is a 1-dimensional array of pseudomonomials  source  #  Simplicial.CanonicalForm     Method .   CanonicalForm(C::CombinatorialCode)::CanonicalForm\n This computes the canonical form of a neural ideal for the combinatorial code C\n Example Usage:   CF=CanonicalForm(C)  source  #  Simplicial.PseudoMonomial     Type .  PseudoMonomial is a type for encoding pseudomonomials    source  #  Simplicial.SmallIntegerType     Type .  below are constants used in the canonical form computation. In the future, these will be obsolete  source  #  Simplicial.Code2CF     Method .  This computes the canonical form of a neural ideal for the combinatorial code C, represented by a bit array  whose rows are codewords.       The algorithm is an optimized Julia language  version of the matlab code in https://github.com/nebneuron/neural-ideal/blob/master/Code2CF.m       that was originally written  by Nora Youngs.       For more information about the neural ideal and its uses, see e.g. the paper about the neural ring http://arxiv.org/abs/1212.4201  source  #  Simplicial.PseudoMonomialType     Method .  function PseudoMonomialType(p::PseudoMonomial)::Int This function returns the type of a pseudomonomial according to the classification in the neural ring paper  source", 
+            "title": "Combinatorial Codes"
+        }, 
+        {
+            "location": "/lib/simplicialcomplexes/", 
+            "text": "Simplicial Complexes\n\n\nThis is an incomplete list of methods available for manipulating \nSimplicialComplex\nes\n\n\n#\n\n\nSimplicial.KleinBottle\n \n \nMethod\n.\n\n\nKleinBottle()::SimplicialComplex\nThis function returns the minimal triangulation of the Klein bottle (8 vertices, 16 facets)\nUsage: K=KleinBottle()\n\n\n\n\nsource\n\n\n#\n\n\nSimplicial.PoincareHomologyThreeSphere\n \n \nMethod\n.\n\n\nPoincareHomologyThreeSphere()::SimplicialComplex\nA triangulation of the Poincare homology 3-sphere (16 vertices, 90 facets)\nUsage: K=PoincareHomologyThreeSphere()\nThis is a manifold whose integral homology is identical to the ordinary 3-sphere, but it is not simply connected.\nIn particular, its fundamental group is the binary icosahedral group, which has order 120.\nThe triangulation given here has 16 vertices and is due to Bj\u00f6rner and Lutz [BL2000].\n[BL2000]    Anders Bj\u00f6rner and Frank H. Lutz, \u201cSimplicial manifolds, bistellar flips and a 16-vertex triangulation of the Poincar\u00e9 homology 3-sphere\u201d, Experiment. Math. 9 (2000), no. 2, 275-289.\n\n\n\n\nsource\n\n\n#\n\n\nSimplicial.TwoTorus\n \n \nMethod\n.\n\n\nTwoTorus()::SimplicialComplex\nThis function returns the minimal triangulation of a two-torus (7 vertices, 14 facets)\nUsage: K=TwoTorus()\n\n\n\n\nsource", 
+            "title": "SimplicialComplex"
+        }, 
+        {
+            "location": "/lib/simplicialcomplexes/#simplicial-complexes", 
+            "text": "This is an incomplete list of methods available for manipulating  SimplicialComplex es  #  Simplicial.KleinBottle     Method .  KleinBottle()::SimplicialComplex\nThis function returns the minimal triangulation of the Klein bottle (8 vertices, 16 facets)\nUsage: K=KleinBottle()  source  #  Simplicial.PoincareHomologyThreeSphere     Method .  PoincareHomologyThreeSphere()::SimplicialComplex\nA triangulation of the Poincare homology 3-sphere (16 vertices, 90 facets)\nUsage: K=PoincareHomologyThreeSphere()\nThis is a manifold whose integral homology is identical to the ordinary 3-sphere, but it is not simply connected.\nIn particular, its fundamental group is the binary icosahedral group, which has order 120.\nThe triangulation given here has 16 vertices and is due to Bj\u00f6rner and Lutz [BL2000].\n[BL2000]    Anders Bj\u00f6rner and Frank H. Lutz, \u201cSimplicial manifolds, bistellar flips and a 16-vertex triangulation of the Poincar\u00e9 homology 3-sphere\u201d, Experiment. Math. 9 (2000), no. 2, 275-289.  source  #  Simplicial.TwoTorus     Method .  TwoTorus()::SimplicialComplex\nThis function returns the minimal triangulation of a two-torus (7 vertices, 14 facets)\nUsage: K=TwoTorus()  source", 
+            "title": "Simplicial Complexes"
+        }, 
+        {
+            "location": "/lib/filteredsimplicialcomplexes/", 
+            "text": "Filtered Simplicial Complexes\n\n\nThis is a non-existent list of methods available for manipulating \nFiltrationOfSimplicialComplexes\ns.", 
+            "title": "FiltrationOfSimplicialComplexes"
+        }, 
+        {
+            "location": "/lib/filteredsimplicialcomplexes/#filtered-simplicial-complexes", 
+            "text": "This is a non-existent list of methods available for manipulating  FiltrationOfSimplicialComplexes s.", 
+            "title": "Filtered Simplicial Complexes"
+        }, 
+        {
+            "location": "/lib/directedcomplexes/", 
+            "text": "Directed Complexes\n\n\nThis is a non-existent list of methods available for manipulating \nDirectedComplex\nes.", 
+            "title": "DirectedComplex"
+        }, 
+        {
+            "location": "/lib/directedcomplexes/#directed-complexes", 
+            "text": "This is a non-existent list of methods available for manipulating  DirectedComplex es.", 
+            "title": "Directed Complexes"
+        }
+    ]
+}
