@@ -8,7 +8,7 @@
   
   <meta name="author" content="Vladimir Itskov, Alex Kunin, Min-Chun Wu, et al.">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>DirectedComplex - Simplicial.jl</title>
+  <title>`DirectedComplex` - Simplicial.jl</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "DirectedComplex";
+    var mkdocs_page_name = "`DirectedComplex`";
     var mkdocs_page_input_path = "lib/directedcomplexes.md";
     var mkdocs_page_url = "/lib/directedcomplexes/";
   </script>
@@ -70,25 +70,33 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../combinatorialcodes/">CombinatorialCode</a>
+    <a class="" href="../combinatorialcodes/">`CombinatorialCode`</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../simplicialcomplexes/">SimplicialComplex</a>
+    <a class="" href="../simplicialcomplexes/">`SimplicialComplex`</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../filteredsimplicialcomplexes/">FiltrationOfSimplicialComplexes</a>
+    <a class="" href="../filteredsimplicialcomplexes/">`FiltrationOfSimplicialComplexes`</a>
 	    </li>
           
             <li class="toctree-l1 current">
 		
-    <a class="current" href="./">DirectedComplex</a>
+    <a class="current" href="./">`DirectedComplex`</a>
     <ul class="subnav">
             
     <li class="toctree-l2"><a href="#directed-complexes">Directed Complexes</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#public-methods">Public methods</a></li>
+        
+            <li><a class="toctree-l3" href="#private-methods">Private methods</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -116,7 +124,7 @@
     
       
     
-    <li>DirectedComplex</li>
+    <li>`DirectedComplex`</li>
     <li class="wy-breadcrumbs-aside">
       
         <a href="https://github.com/nebneuron/Simplicial.jl/edit/master/docs/lib/directedcomplexes.md"
@@ -131,7 +139,80 @@
               
                 <p><a id='lib-directed-complexes-1'></a></p>
 <h1 id="directed-complexes">Directed Complexes</h1>
-<p>This is a non-existent list of methods available for manipulating <code>DirectedComplex</code>es.</p>
+<p><a id='Public-methods-1'></a></p>
+<h2 id="public-methods">Public methods</h2>
+<p><a id='Simplicial.DirectedCodeword' href='#Simplicial.DirectedCodeword'>#</a>
+<strong><code>Simplicial.DirectedCodeword</code></strong> &mdash; <em>Type</em>.</p>
+<p>DirectedCodeword is the type that encodes (ordered) sequences of vertices</p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1bab98f63b4d0c5d61321a11f106a39661cf7703/src/DirectedComplexes/DirectedComplex.jl#L1' class='documenter-source'>source</a><br></p>
+<p><a id='Simplicial.DirectedComplex-Tuple{Union{Array{Float64,2}, Array{Int64,2}}}' href='#Simplicial.DirectedComplex-Tuple{Union{Array{Float64,2}, Array{Int64,2}}}'>#</a>
+<strong><code>Simplicial.DirectedComplex</code></strong> &mdash; <em>Method</em>.</p>
+<p>This function takes a matrix (of integers or Floats and produces a directed complex )</p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1bab98f63b4d0c5d61321a11f106a39661cf7703/src/DirectedComplexes/DirectedComplex.jl#L101-L104' class='documenter-source'>source</a><br></p>
+<p><a id='Base.:<=-Tuple{Array{Int16,1},Array{Int16,1}}' href='#Base.:<=-Tuple{Array{Int16,1},Array{Int16,1}}'>#</a>
+<strong><code>Base.:&lt;=</code></strong> &mdash; <em>Method</em>.</p>
+<p>issubsequence(a,b) a.k.a. &lt;=(a,b)  determines if the sequence a is a subsequence of sequence b</p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1bab98f63b4d0c5d61321a11f106a39661cf7703/src/DirectedComplexes/DirectedComplex.jl#L4' class='documenter-source'>source</a><br></p>
+<p><a id='Simplicial.Matrix2Permutations-Tuple{Array{T,2} where T}' href='#Simplicial.Matrix2Permutations-Tuple{Array{T,2} where T}'>#</a>
+<strong><code>Simplicial.Matrix2Permutations</code></strong> &mdash; <em>Method</em>.</p>
+<p>function  Matrix2Permutations(A::Matrix)::Matrix   This utility function takes a matrix A of real numbers and returns the matrix RowOrdering of integers, so that   RowOrdering[i,j] = the order of the element A[i,j] in the i-th row of A   Usage: RowOrdering=Matrix2Permutations(A);</p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1bab98f63b4d0c5d61321a11f106a39661cf7703/src/DirectedComplexes/DirectedComplex.jl#L83-L88' class='documenter-source'>source</a><br></p>
+<p><a id='Simplicial.issubsequence-Tuple{Array{Int16,1},Array{Int16,1}}' href='#Simplicial.issubsequence-Tuple{Array{Int16,1},Array{Int16,1}}'>#</a>
+<strong><code>Simplicial.issubsequence</code></strong> &mdash; <em>Method</em>.</p>
+<p>The following name added for compartibility with the older code</p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1bab98f63b4d0c5d61321a11f106a39661cf7703/src/DirectedComplexes/DirectedComplex.jl#L36' class='documenter-source'>source</a><br></p>
+<p><a id='Simplicial.BettiNumbers' href='#Simplicial.BettiNumbers'>#</a>
+<strong><code>Simplicial.BettiNumbers</code></strong> &mdash; <em>Function</em>.</p>
+<p>beta=BettiNumbers(D::DirectedComplex,maximaldimension=Inf)</p>
+<p>This function returns the Betti numbers of the homology of a (so far only pure) directed complex</p>
+<p>This is a very crude way to compute directed homology – this does not use any tricks, just the definition and the built-in rank function that may fail to work properly on large enough matrices. Use with caution. Works as prescribed on small enough complexes.</p>
+<p>Here the length of beta is equal to maximaldimension+1, beta[1] is 0-th Betti number  and beta[P.dim+1] is the P.dim-dimensional Betti number maximaldimension is an optional parameter to restrict the maximal possible dimension of homology to compute</p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1bab98f63b4d0c5d61321a11f106a39661cf7703/src/DirectedComplexes/Posets.jl#L125-L138' class='documenter-source'>source</a><br></p>
+<p><a id='Private-methods-1'></a></p>
+<h2 id="private-methods">Private methods</h2>
+<p>To use these functions, you'll have to call <code>Simplicial.function_name()</code></p>
+<p><a id='Simplicial.FiltrationOfSimplicialComplexes' href='#Simplicial.FiltrationOfSimplicialComplexes'>#</a>
+<strong><code>Simplicial.FiltrationOfSimplicialComplexes</code></strong> &mdash; <em>Type</em>.</p>
+<p>type FiltrationOfSimplicialComplexes.   This is the type that we use for the increasing fitrations of simplicial complexes</p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1bab98f63b4d0c5d61321a11f106a39661cf7703/src/SimplicialComplexes/FiltrationOfSimplicialComplexes.jl#L1-L3' class='documenter-source'>source</a><br></p>
+<p><a id='Simplicial.DowkerComplex' href='#Simplicial.DowkerComplex'>#</a>
+<strong><code>Simplicial.DowkerComplex</code></strong> &mdash; <em>Function</em>.</p>
+<pre><code>DowkerComplex(A,maxdensity=1)
+
+This returns the Dowker complex of a rectangular matrix A
+Normal usage of this function should be
+
+FS, GraphDensity=DowkerComplex(A);
+or
+FS, GraphDensity=DowkerComplex(A,maxdensity);
+
+Here FS is of the type FiltrationOfSimplicialComplexes
+And GraphDensity is an array of real numbers of length =F.depth
+where each number GraphDensity[i] represents the graph density at the simplicial complex Delta_i in the filtration
+</code></pre>
+
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1bab98f63b4d0c5d61321a11f106a39661cf7703/src/SimplicialComplexes/FiltrationOfSimplicialComplexes.jl#L172-L186' class='documenter-source'>source</a><br></p>
+<p><a id='Simplicial.Skeleton-Tuple{Simplicial.FiltrationOfSimplicialComplexes,Int64}' href='#Simplicial.Skeleton-Tuple{Simplicial.FiltrationOfSimplicialComplexes,Int64}'>#</a>
+<strong><code>Simplicial.Skeleton</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>Skeleton(FS::FiltrationOfSimplicialComplexes,dim::Int)::FiltrationOfSimplicialComplexes
+This Funcion takes a filtration of simplicial complexes and produces a filtration of their skeletons
+</code></pre>
+
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1bab98f63b4d0c5d61321a11f106a39661cf7703/src/SimplicialComplexes/FiltrationOfSimplicialComplexes.jl#L265-L269' class='documenter-source'>source</a><br></p>
+<p><a id='Simplicial.Skeleton_OLD-Tuple{Simplicial.FiltrationOfSimplicialComplexes,Int64}' href='#Simplicial.Skeleton_OLD-Tuple{Simplicial.FiltrationOfSimplicialComplexes,Int64}'>#</a>
+<strong><code>Simplicial.Skeleton_OLD</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>Skeleton_OLD(FS::FiltrationOfSimplicialComplexes,dim::Int)::FiltrationOfSimplicialComplexes
+This Function takes a filtration of simplicial complexes and produces a filtration of their skeletons
+This implementation is &quot;naive&quot;, old and very inefficient on large skeleta
+</code></pre>
+
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1bab98f63b4d0c5d61321a11f106a39661cf7703/src/SimplicialComplexes/FiltrationOfSimplicialComplexes.jl#L326-L330' class='documenter-source'>source</a><br></p>
+<p><a id='Simplicial.FaceBirthpush!-Tuple{Array{Set{Int16},1},Array{Int64,1},Set{Int16},Int64}' href='#Simplicial.FaceBirthpush!-Tuple{Array{Set{Int16},1},Array{Int64,1},Set{Int16},Int64}'>#</a>
+<strong><code>Simplicial.FaceBirthpush!</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>FaceBirthpush!(ListOfFaces::Array{CodeWord,1},births::Array{Int,1},AddedFace::CodeWord,AssignedBirth::Int)
+</code></pre>
+
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1bab98f63b4d0c5d61321a11f106a39661cf7703/src/SimplicialComplexes/FiltrationOfSimplicialComplexes.jl#L132-L134' class='documenter-source'>source</a><br></p>
               
             </div>
           </div>
@@ -140,7 +221,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../filteredsimplicialcomplexes/" class="btn btn-neutral" title="FiltrationOfSimplicialComplexes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../filteredsimplicialcomplexes/" class="btn btn-neutral" title="`FiltrationOfSimplicialComplexes`"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   

@@ -60,6 +60,14 @@
             
     <li class="toctree-l2"><a href="#combinatorial-codes">Combinatorial Codes</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l3" href="#combinatorialcode-type">CombinatorialCode Type</a></li>
+        
+            <li><a class="toctree-l3" href="#other-features">Other features</a></li>
+        
+        </ul>
+    
 
     </ul>
 	    </li>
@@ -76,22 +84,22 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../lib/combinatorialcodes/">CombinatorialCode</a>
+    <a class="" href="../../lib/combinatorialcodes/">`CombinatorialCode`</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../lib/simplicialcomplexes/">SimplicialComplex</a>
+    <a class="" href="../../lib/simplicialcomplexes/">`SimplicialComplex`</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../lib/filteredsimplicialcomplexes/">FiltrationOfSimplicialComplexes</a>
+    <a class="" href="../../lib/filteredsimplicialcomplexes/">`FiltrationOfSimplicialComplexes`</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../lib/directedcomplexes/">DirectedComplex</a>
+    <a class="" href="../../lib/directedcomplexes/">`DirectedComplex`</a>
 	    </li>
           
         </ul>
@@ -131,19 +139,41 @@
               
                 <p><a id='man-combinatorial-codes-1'></a></p>
 <h1 id="combinatorial-codes">Combinatorial Codes</h1>
-<p><strong>Definition:</strong> A <em>combinatorial code</em> $C$ is a collection $C \subseteq 2^{[n]}$ of <em>codewords</em>, subsets of $[n] = {1,\dots,n}$. Generally, no further structure is assumed.</p>
-<p>Combinatorial codes are represented in <code>Simplicial</code> using the <a href="../../lib/combinatorialcodes/#Simplicial.CombinatorialCode-Tuple{BitArray{2}}"><code>CombinatorialCode</code></a> type.</p>
-<pre><code class="julia-repl">julia&gt; C = CombinatorialCode([[],[1],[1,2],[2,3]]);
-
-julia&gt; show(C)
-This is a code on 3 vertices: 1 2 3
-The code consists of 4 words:
-______________________________
-emptyset
-1
-1 2
-2 3
+<p><strong>Definition:</strong> A <em>combinatorial code</em> $C$ is a collection $C \subseteq 2^{[n]}$ of <em>codewords</em>, subsets of the vertex set $[n] = {1,\dots,n}$. Generally, no further structure is assumed.</p>
+<p><a id='CombinatorialCode-Type-1'></a></p>
+<h2 id="combinatorialcode-type"><code>CombinatorialCode</code> Type</h2>
+<p>Combinatorial codes are represented using the <a href="../../lib/combinatorialcodes/#Simplicial.CombinatorialCode"><code>CombinatorialCode{T}</code></a> type. Codewords are stored as <code>Set{T}</code>s, where <code>T&lt;:Integer</code></p>
+<pre><code class="julia-repl">julia&gt; C = CombinatorialCode([[],[1],[1,2],[2,3]])
+Simplicial.CombinatorialCode{Int8}
+Code on [3] with 4 codewords
+C = {emptyset, 1, 1 2, 2 3}
 </code></pre>
+
+<p>By default, when a code is constructed, the smallest <code>Int</code> type that can store all the vertices. To use <code>UInt</code> types, pass the keyword argument <code>signed=false</code>. To override the integer type, pass <code>squash_int_type=false</code> to the constructor.</p>
+<pre><code class="julia-repl">julia&gt; D = CombinatorialCode([[],[1],[1,2],[2,3]], signed=false)
+Simplicial.CombinatorialCode{UInt8}
+Code on [3] with 4 codewords
+C = {emptyset, 1, 1 2, 2 3}
+
+
+julia&gt; D = CombinatorialCode([[],[1],[1,2],[2,3]], squash_int_type=false)
+Simplicial.CombinatorialCode{Int64}
+Code on [3] with 4 codewords
+C = {emptyset, 1, 1 2, 2 3}
+</code></pre>
+
+<p><a id='Other-features-1'></a></p>
+<h2 id="other-features">Other features</h2>
+<p><code>CombinatorialCode</code>s are <a href="https://docs.julialang.org/en/stable/manual/interfaces/#man-interface-iteration-1">iterable</a>:</p>
+<pre><code class="julia-repl">julia&gt; [length(c) for c in C]
+4-element Array{Int64,1}:
+ 0
+ 1
+ 2
+ 2
+</code></pre>
+
+<p>A complete list of methods can be found <a href="../../lib/combinatorialcodes/#lib-combinatorial-codes-1">here</a>.</p>
               
             </div>
           </div>
