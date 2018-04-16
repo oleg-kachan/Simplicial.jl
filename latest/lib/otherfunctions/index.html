@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Vladimir Itskov, Alex Kunin, Min-Chun Wu, et al.">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Additional Functions - Simplicial.jl</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../assets/Documenter.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Additional Functions";
+    var mkdocs_page_input_path = "lib/otherfunctions.md";
+    var mkdocs_page_url = "/lib/otherfunctions/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Simplicial.jl</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../man/combinatorialcodes/">Combinatorial Codes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../man/simplicialcomplexes/">Simplicial Complexes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../man/directedcomplexes/">Directed Complexes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../combinatorialcodes/">CombinatorialCode Type</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../simplicialcomplexes/">SimplicialComplex Type</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../filteredsimplicialcomplexes/">FiltrationOfSimplicialComplexes Type</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../directedcomplexes/">DirectedComplex Type</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Additional Functions</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#other-functions">Other functions</a></li>
+    
+
+    <li class="toctree-l2"><a href="#public-methods">Public methods</a></li>
+    
+
+    <li class="toctree-l2"><a href="#private-methods">Private methods</a></li>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Simplicial.jl</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Additional Functions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/nebneuron/Simplicial.jl/edit/master/docs/lib/otherfunctions.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><a id='Other-functions-1'></a></p>
+<h1 id="other-functions">Other functions</h1>
+<p>Other miscellaneous functions provided by this package, or used internally.</p>
+<p><a id='Public-methods-1'></a></p>
+<h1 id="public-methods">Public methods</h1>
+<p><a id='Private-methods-1'></a></p>
+<h1 id="private-methods">Private methods</h1>
+<p>These are generally intended for internal use, but if you really want to use one, its use must be qualified: <code>Simplicial.function_name()</code></p>
+<p><a id='Simplicial.binary_to_set-Tuple{AbstractArray{Bool,1},Any}' href='#Simplicial.binary_to_set-Tuple{AbstractArray{Bool,1},Any}'>#</a>
+<strong><code>Simplicial.binary_to_set</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>binary_to_set(b, V)
+</code></pre>
+
+<p>Converts binary vector <code>b</code> into a subset of <code>V</code>, reresented as a vector.</p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/74b2eb20e358a3f180a94cfc3790a69bd545a7a1/src/utilities/auxiliaryoperations.jl#L53-L57' class='documenter-source'>source</a><br></p>
+<p><a id='Simplicial.insert_sorted!-Union{Tuple{Array{T,1},T,Any}, Tuple{T}} where T' href='#Simplicial.insert_sorted!-Union{Tuple{Array{T,1},T,Any}, Tuple{T}} where T'>#</a>
+<strong><code>Simplicial.insert_sorted!</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>insert_sorted!(a::Vector{T}, item::T, lt)
+</code></pre>
+
+<p>Inserts <code>item</code> into sorted vector <code>a</code> in the appropriate position, according to the order <code>lt</code>. Danger! Requires <code>item</code> to be of type <code>T</code>.</p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/74b2eb20e358a3f180a94cfc3790a69bd545a7a1/src/utilities/auxiliaryoperations.jl#L43-L49' class='documenter-source'>source</a><br></p>
+<p><a id='Simplicial.lessequal_GrRevLex-Tuple{AbstractArray{Bool,1},AbstractArray{Bool,1}}' href='#Simplicial.lessequal_GrRevLex-Tuple{AbstractArray{Bool,1},AbstractArray{Bool,1}}'>#</a>
+<strong><code>Simplicial.lessequal_GrRevLex</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>lessequal_GrRevLex(a, b)
+</code></pre>
+
+<p>True if $a &lt;=_GrRevLex b$. See <a href="https://en.wikipedia.org/wiki/Monomial_order#Graded_reverse_lexicographic_order">graded reverse lexicographic order</a>.</p>
+<p>Can be used to <code>sortrows</code> a matrix with boolean entries (i.e. <code>a</code> and <code>b</code> are both <code>AbstractVector{Bool}</code> types) or to sort a list of sets (i.e. <code>a</code> and <code>b</code> are <code>Vector</code>s or <code>Set</code>s)</p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/74b2eb20e358a3f180a94cfc3790a69bd545a7a1/src/utilities/auxiliaryoperations.jl#L29-L39' class='documenter-source'>source</a><br></p>
+<p><a id='Simplicial.list_to_bitmatrix' href='#Simplicial.list_to_bitmatrix'>#</a>
+<strong><code>Simplicial.list_to_bitmatrix</code></strong> &mdash; <em>Function</em>.</p>
+<pre><code>list_to_bitmatrix(L, V=collect(union(L...)))
+</code></pre>
+
+<p>Represents <code>L</code> as a binary matrix where the <code>i</code>th row is the logical index of the <code>i</code>th list in <code>L</code> to the vertex set <code>V</code>. Does not attempt any pruning of redundant faces; to get unique rows from the result <code>B</code>, use <code>unique(B, 1)</code></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/74b2eb20e358a3f180a94cfc3790a69bd545a7a1/src/utilities/auxiliaryoperations.jl#L72-L79' class='documenter-source'>source</a><br></p>
+<p><a id='Simplicial.set_to_binary-Tuple{Any,Any}' href='#Simplicial.set_to_binary-Tuple{Any,Any}'>#</a>
+<strong><code>Simplicial.set_to_binary</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>set_to_binary(s, V)
+</code></pre>
+
+<p>Converts set <code>s</code> into a logical index to the (ordered) vertex set <code>V</code></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/74b2eb20e358a3f180a94cfc3790a69bd545a7a1/src/utilities/auxiliaryoperations.jl#L60-L65' class='documenter-source'>source</a><br></p>
+<p><a id='Simplicial.smallest_int_type-Tuple' href='#Simplicial.smallest_int_type-Tuple'>#</a>
+<strong><code>Simplicial.smallest_int_type</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>smallest_int_type(ints...)
+</code></pre>
+
+<p>Return the smallest integer type that can store all the given integers.</p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/74b2eb20e358a3f180a94cfc3790a69bd545a7a1/src/utilities/auxiliaryoperations.jl#L4-L8' class='documenter-source'>source</a><br></p>
+<p><a id='Simplicial.smallest_uint_type-Tuple' href='#Simplicial.smallest_uint_type-Tuple'>#</a>
+<strong><code>Simplicial.smallest_uint_type</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>smallest_uint_type(ints...)
+</code></pre>
+
+<p>Return the smallest unsigned integer type that can store all the given integers</p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/74b2eb20e358a3f180a94cfc3790a69bd545a7a1/src/utilities/auxiliaryoperations.jl#L16-L20' class='documenter-source'>source</a><br></p>
+<p><a id='Simplicial.subset_rows-Tuple{AbstractArray{Bool,2}}' href='#Simplicial.subset_rows-Tuple{AbstractArray{Bool,2}}'>#</a>
+<strong><code>Simplicial.subset_rows</code></strong> &mdash; <em>Method</em>.</p>
+<pre><code>subset_rows(B)
+</code></pre>
+
+<p>Which rows in binary matrix <code>B</code> have support contained in the support of another row. Returns a vector <code>V</code> with <code>V[i] = 0</code> if row <code>i</code> is not contained in any other row; otherwise, <code>V[i] = j</code> means that set <code>i</code> is a subset of set <code>j</code>. If row <code>i</code> is contained in multiple other rows, no guarantee about which will be returned.</p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/74b2eb20e358a3f180a94cfc3790a69bd545a7a1/src/utilities/auxiliaryoperations.jl#L88-L96' class='documenter-source'>source</a><br></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../directedcomplexes/" class="btn btn-neutral" title="DirectedComplex Type"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/nebneuron/Simplicial.jl/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../directedcomplexes/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+      <script src="../../assets/mathjaxhelper.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>
