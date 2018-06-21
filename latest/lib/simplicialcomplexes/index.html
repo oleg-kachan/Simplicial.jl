@@ -152,7 +152,7 @@
 </code></pre>
 
 <p>The abstract parent class for all concrete implementations of <em>abstract simplicial complexes</em> (a regrettable clash of terminology).</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/SimplicialComplexes/SimplicialComplex.jl#L1-L6' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/SimplicialComplexes/SimplicialComplex.jl#L1-L6' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.SimplicialComplex' href='#Simplicial.SimplicialComplex'>#</a>
 <strong><code>Simplicial.SimplicialComplex</code></strong> &mdash; <em>Type</em>.</p>
 <pre><code>SimplicialComplex{T}
@@ -168,21 +168,21 @@
 </code></pre>
 
 <p>Interprets rows of binary matrix <code>B</code> as codewords.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/SimplicialComplexes/SimplicialComplex.jl#L106-L125' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/SimplicialComplexes/SimplicialComplex.jl#L106-L125' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.add-Union{Tuple{Simplicial.SimplicialComplex{T},Any}, Tuple{T}} where T' href='#Simplicial.add-Union{Tuple{Simplicial.SimplicialComplex{T},Any}, Tuple{T}} where T'>#</a>
 <strong><code>Simplicial.add</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>add(K::SimplicialComplex, sigma)
 </code></pre>
 
 <p>Add face <code>sigma</code> to simplicial complex <code>K</code>. If <code>sigma</code> is already a face of <code>K</code>, returns <code>K</code>, otherwise returns a new object.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/SimplicialComplexes/SimplicialComplex.jl#L238-L243' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/SimplicialComplexes/SimplicialComplex.jl#L238-L243' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.del!-Union{Tuple{Simplicial.SimplicialComplex{T},Any}, Tuple{T}} where T' href='#Simplicial.del!-Union{Tuple{Simplicial.SimplicialComplex{T},Any}, Tuple{T}} where T'>#</a>
 <strong><code>Simplicial.del!</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>del!(K, tau)
 </code></pre>
 
 <p>In-place version of <a href="../combinatorialcodes/#Simplicial.del-Tuple{Simplicial.CombinatorialCode,Any}"><code>del</code></a></p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/SimplicialComplexes/SimplicialComplex.jl#L218-L222' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/SimplicialComplexes/SimplicialComplex.jl#L218-L222' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.del-Union{Tuple{Simplicial.SimplicialComplex{T},Any}, Tuple{T}} where T' href='#Simplicial.del-Union{Tuple{Simplicial.SimplicialComplex{T},Any}, Tuple{T}} where T'>#</a>
 <strong><code>Simplicial.del</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>del(K, tau)
@@ -191,7 +191,7 @@
 <p>The deletion of <code>tau</code> from <code>K</code>. This is the set faces in <code>K</code> which are <em>not</em> cofaces of <code>tau</code>. Returned complex has same vertex type and vertex set as <code>K</code>.</p>
 <p>$del_τ(K) = {σ ∈ K : τ ⊏̸ σ}$</p>
 <p>For "deletion" in the sense "faces which do not intersect <code>tau</code>", compute the complement of <code>tau</code> in <code>K</code>'s vertex set and use <code>res</code> to restrict to that set.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/SimplicialComplexes/SimplicialComplex.jl#L200-L210' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/SimplicialComplexes/SimplicialComplex.jl#L200-L210' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.dim-Tuple{Simplicial.SimplicialComplex}' href='#Simplicial.dim-Tuple{Simplicial.SimplicialComplex}'>#</a>
 <strong><code>Simplicial.dim</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>dim(K)
@@ -199,14 +199,14 @@
 
 <p>The dimension of <code>K</code>, defined as the maximum size of a face of <code>K</code> minus 1.</p>
 <p>If <code>K</code> is the void complex (i.e. <code>K</code> has no faces), returns <code>-2</code> for type stability (this function always returns an <code>Int</code>); mathematically a sensible value would be <code>-Inf</code>.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/SimplicialComplexes/SimplicialComplex.jl#L170-L177' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/SimplicialComplexes/SimplicialComplex.jl#L170-L177' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.dimension' href='#Simplicial.dimension'>#</a>
 <strong><code>Simplicial.dimension</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>dimension(K)
 </code></pre>
 
 <p>Alias for <a href="./#Simplicial.dim-Tuple{Simplicial.SimplicialComplex}"><code>dim</code></a></p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/SimplicialComplexes/SimplicialComplex.jl#L179-L183' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/SimplicialComplexes/SimplicialComplex.jl#L179-L183' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.fvector-Tuple{Simplicial.AbstractSimplicialComplex}' href='#Simplicial.fvector-Tuple{Simplicial.AbstractSimplicialComplex}'>#</a>
 <strong><code>Simplicial.fvector</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>fvector(K)
@@ -214,7 +214,7 @@
 
 <p>Compute the f-vector of the given simplicial complex.</p>
 <p>The f-vector of a simplicial complex is the vector $(f_0, f_1, ..., f_{d+1})$ where $f_i$ is the number of faces of cardinality $i$ (i.e. dimension $i - 1$).</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/SimplicialComplexes/SimplicialComplex.jl#L26-L34' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/SimplicialComplexes/SimplicialComplex.jl#L26-L34' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.hvector-Tuple{Array{T,1} where T}' href='#Simplicial.hvector-Tuple{Array{T,1} where T}'>#</a>
 <strong><code>Simplicial.hvector</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>hvector(K)
@@ -223,7 +223,7 @@ hvector(fv)
 
 <p>Compute the h-vector of complex <code>K</code> by calling <code>fvector(K)</code>, or compute the h-vector corresponding to vector <code>fv</code>.</p>
 <p>See <a href="./#Simplicial.fvector-Tuple{Simplicial.AbstractSimplicialComplex}"><code>fvector</code></a> for details on the f-vector of a simplicial complex. The f-polynomial is the polynomial $F(x)$ with coefficient $f_i$ in degree $d+1-i$; the h-vector is the coefficients of $F(x-1)$ in decreasing order of degree.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/SimplicialComplexes/SimplicialComplex.jl#L43-L54' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/SimplicialComplexes/SimplicialComplex.jl#L43-L54' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.link-Union{Tuple{Simplicial.SimplicialComplex{T},Any}, Tuple{T}} where T' href='#Simplicial.link-Union{Tuple{Simplicial.SimplicialComplex{T},Any}, Tuple{T}} where T'>#</a>
 <strong><code>Simplicial.link</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>link(K::SimplicialComplex, sigma)
@@ -231,7 +231,7 @@ hvector(fv)
 
 <p>The link of <code>sigma</code> in <code>K</code>.</p>
 <p>$link_σ(K) = {τ ∈ K : σ ∩ τ = ∅, σ ∪ τ ∈ K}$</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/SimplicialComplexes/SimplicialComplex.jl#L186-L192' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/SimplicialComplexes/SimplicialComplex.jl#L186-L192' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.res-Union{Tuple{Simplicial.SimplicialComplex{T},Any}, Tuple{T}} where T' href='#Simplicial.res-Union{Tuple{Simplicial.SimplicialComplex{T},Any}, Tuple{T}} where T'>#</a>
 <strong><code>Simplicial.res</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>res(K, Vprime)
@@ -239,7 +239,7 @@ hvector(fv)
 
 <p>The restriction of <code>K</code> to <code>Vprime</code>.</p>
 <p>$res_{V'}(K) = {σ ∈ K : σ ⊆ V'} = {σ ∩ V' : σ ∈ K}$</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/SimplicialComplexes/SimplicialComplex.jl#L225-L231' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/SimplicialComplexes/SimplicialComplex.jl#L225-L231' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.IrrelevantComplex-Union{Tuple{Set{T}}, Tuple{T}} where T' href='#Simplicial.IrrelevantComplex-Union{Tuple{Set{T}}, Tuple{T}} where T'>#</a>
 <strong><code>Simplicial.IrrelevantComplex</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>IrrelevantComplex(vertices=Set{Int}())
@@ -248,7 +248,7 @@ IrrelevantComplex(K::AbstractSimplicialComplex)
 
 <p>The irrelevant complex, which has exactly one face, the empty set. Vertex set can be optionally specified</p>
 <p>The second form returns a simplicial complex of the same type and vertex set as <code>K</code>.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/SimplicialComplexes/SimplicialComplexOperations.jl#L16-L25' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/SimplicialComplexes/SimplicialComplexOperations.jl#L16-L25' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.VoidComplex-Union{Tuple{Set{T}}, Tuple{T}} where T' href='#Simplicial.VoidComplex-Union{Tuple{Set{T}}, Tuple{T}} where T'>#</a>
 <strong><code>Simplicial.VoidComplex</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>VoidComplex(vertices=Set{Int}())
@@ -257,7 +257,7 @@ VoidComplex(K::AbstractSimplicialComplex)
 
 <p>The void simplicial complex, which has no faces (not even the empty set), with specified vertex set (default is empty).</p>
 <p>The second form returns a simplicial complex of the same type and vertex set as <code>K</code></p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/SimplicialComplexes/SimplicialComplexOperations.jl#L2-L11' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/SimplicialComplexes/SimplicialComplexOperations.jl#L2-L11' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.alexander_dual-Tuple{Simplicial.SimplicialComplex}' href='#Simplicial.alexander_dual-Tuple{Simplicial.SimplicialComplex}'>#</a>
 <strong><code>Simplicial.alexander_dual</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>alexader_dual(SC::SimplicialComplex)
@@ -266,7 +266,7 @@ VoidComplex(K::AbstractSimplicialComplex)
 <p>Returns the Alexander dual simplicial complex to <code>SC</code>.</p>
 <p>$dual Δ = {V ∖ c : c ∉ Δ}$</p>
 <p>!!! Implementation note     Currently uses a highly inefficient algorithm, unsuitable for larger complexes.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/SimplicialComplexes/SimplicialComplexOperations.jl#L32-L41' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/SimplicialComplexes/SimplicialComplexOperations.jl#L32-L41' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.polar_complex' href='#Simplicial.polar_complex'>#</a>
 <strong><code>Simplicial.polar_complex</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>polar_complex(C)
@@ -274,7 +274,7 @@ VoidComplex(K::AbstractSimplicialComplex)
 
 <p>Constructs the polar complex $Γ(C)$ for the given code.</p>
 <p>!!! Implementation notes     Vertex set is <code>V = union(vertices(C), map(-,vertices(C)))</code>. This can have strange     results if the vertex type of <code>C</code> is unsigned and the size of the vertex set is large.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/utilities/mixed_type_operations.jl#L4-L13' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/utilities/mixed_type_operations.jl#L4-L13' class='documenter-source'>source</a><br></p>
 <p><a id='Private-methods-1'></a></p>
 <h2 id="private-methods">Private methods</h2>
 <p>To use these functions, you'll have to call <code>Simplicial.function_name()</code></p>
@@ -284,7 +284,7 @@ VoidComplex(K::AbstractSimplicialComplex)
 </code></pre>
 
 <p>Deletes redundant sets in <code>facets</code> in-place. A set is redundant if it is a subset (or equal to) a later set.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/f2c1045384ca83877dacdc789b40b2d5090f165e/src/SimplicialComplexes/SimplicialComplexOperations.jl#L75-L80' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1898979e7e8302f143a0e2c343d26afe24aa1a39/src/SimplicialComplexes/SimplicialComplexOperations.jl#L75-L80' class='documenter-source'>source</a><br></p>
               
             </div>
           </div>
