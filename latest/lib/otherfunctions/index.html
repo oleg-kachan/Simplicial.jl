@@ -154,14 +154,14 @@
 </code></pre>
 
 <p>Converts binary vector <code>b</code> into a subset of <code>V</code>, reresented as a vector.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/768ad60b6e67c1b7ab12055fafffeaa7ba5a19ab/src/utilities/auxiliaryoperations.jl#L53-L57' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/33ec4f02a05883569ff3f656dc4c1d13bf0dcfcc/src/utilities/auxiliaryoperations.jl#L53-L57' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.insert_sorted!-Union{Tuple{Array{T,1},T,Any}, Tuple{T}} where T' href='#Simplicial.insert_sorted!-Union{Tuple{Array{T,1},T,Any}, Tuple{T}} where T'>#</a>
 <strong><code>Simplicial.insert_sorted!</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>insert_sorted!(a::Vector{T}, item::T, lt)
 </code></pre>
 
 <p>Inserts <code>item</code> into sorted vector <code>a</code> in the appropriate position, according to the order <code>lt</code>. Danger! Requires <code>item</code> to be of type <code>T</code>.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/768ad60b6e67c1b7ab12055fafffeaa7ba5a19ab/src/utilities/auxiliaryoperations.jl#L43-L49' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/33ec4f02a05883569ff3f656dc4c1d13bf0dcfcc/src/utilities/auxiliaryoperations.jl#L43-L49' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.lessequal_GrRevLex-Tuple{AbstractArray{Bool,1},AbstractArray{Bool,1}}' href='#Simplicial.lessequal_GrRevLex-Tuple{AbstractArray{Bool,1},AbstractArray{Bool,1}}'>#</a>
 <strong><code>Simplicial.lessequal_GrRevLex</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>lessequal_GrRevLex(a, b)
@@ -169,42 +169,42 @@
 
 <p>True if $a &lt;=_GrRevLex b$. See <a href="https://en.wikipedia.org/wiki/Monomial_order#Graded_reverse_lexicographic_order">graded reverse lexicographic order</a>.</p>
 <p>Can be used to <code>sortrows</code> a matrix with boolean entries (i.e. <code>a</code> and <code>b</code> are both <code>AbstractVector{Bool}</code> types) or to sort a list of sets (i.e. <code>a</code> and <code>b</code> are <code>Vector</code>s or <code>Set</code>s)</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/768ad60b6e67c1b7ab12055fafffeaa7ba5a19ab/src/utilities/auxiliaryoperations.jl#L29-L39' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/33ec4f02a05883569ff3f656dc4c1d13bf0dcfcc/src/utilities/auxiliaryoperations.jl#L29-L39' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.list_to_bitmatrix' href='#Simplicial.list_to_bitmatrix'>#</a>
 <strong><code>Simplicial.list_to_bitmatrix</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>list_to_bitmatrix(L, V=collect(union(L...)))
 </code></pre>
 
 <p>Represents <code>L</code> as a binary matrix where the <code>i</code>th row is the logical index of the <code>i</code>th list in <code>L</code> to the vertex set <code>V</code>. Does not attempt any pruning of redundant faces; to get unique rows from the result <code>B</code>, use <code>unique(B, 1)</code></p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/768ad60b6e67c1b7ab12055fafffeaa7ba5a19ab/src/utilities/auxiliaryoperations.jl#L72-L79' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/33ec4f02a05883569ff3f656dc4c1d13bf0dcfcc/src/utilities/auxiliaryoperations.jl#L72-L79' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.set_to_binary-Tuple{Any,Any}' href='#Simplicial.set_to_binary-Tuple{Any,Any}'>#</a>
 <strong><code>Simplicial.set_to_binary</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>set_to_binary(s, V)
 </code></pre>
 
 <p>Converts set <code>s</code> into a logical index to the (ordered) vertex set <code>V</code></p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/768ad60b6e67c1b7ab12055fafffeaa7ba5a19ab/src/utilities/auxiliaryoperations.jl#L60-L65' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/33ec4f02a05883569ff3f656dc4c1d13bf0dcfcc/src/utilities/auxiliaryoperations.jl#L60-L65' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.smallest_int_type-Tuple' href='#Simplicial.smallest_int_type-Tuple'>#</a>
 <strong><code>Simplicial.smallest_int_type</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>smallest_int_type(ints...)
 </code></pre>
 
 <p>Return the smallest integer type that can store all the given integers.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/768ad60b6e67c1b7ab12055fafffeaa7ba5a19ab/src/utilities/auxiliaryoperations.jl#L4-L8' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/33ec4f02a05883569ff3f656dc4c1d13bf0dcfcc/src/utilities/auxiliaryoperations.jl#L4-L8' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.smallest_uint_type-Tuple' href='#Simplicial.smallest_uint_type-Tuple'>#</a>
 <strong><code>Simplicial.smallest_uint_type</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>smallest_uint_type(ints...)
 </code></pre>
 
 <p>Return the smallest unsigned integer type that can store all the given integers</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/768ad60b6e67c1b7ab12055fafffeaa7ba5a19ab/src/utilities/auxiliaryoperations.jl#L16-L20' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/33ec4f02a05883569ff3f656dc4c1d13bf0dcfcc/src/utilities/auxiliaryoperations.jl#L16-L20' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.subset_rows-Tuple{AbstractArray{Bool,2}}' href='#Simplicial.subset_rows-Tuple{AbstractArray{Bool,2}}'>#</a>
 <strong><code>Simplicial.subset_rows</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>subset_rows(B)
 </code></pre>
 
 <p>Which rows in binary matrix <code>B</code> have support contained in the support of another row. Returns a vector <code>V</code> with <code>V[i] = 0</code> if row <code>i</code> is not contained in any other row; otherwise, <code>V[i] = j</code> means that set <code>i</code> is a subset of set <code>j</code>. If row <code>i</code> is contained in multiple other rows, no guarantee about which will be returned.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/768ad60b6e67c1b7ab12055fafffeaa7ba5a19ab/src/utilities/auxiliaryoperations.jl#L88-L96' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/33ec4f02a05883569ff3f656dc4c1d13bf0dcfcc/src/utilities/auxiliaryoperations.jl#L88-L96' class='documenter-source'>source</a><br></p>
               
             </div>
           </div>
