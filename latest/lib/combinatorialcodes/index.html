@@ -154,7 +154,7 @@
 </code></pre>
 
 <p>The abstract parent class for concrete implements of <em>combinatorial codes</em>.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CombinatorialCodes.jl#L1-L5' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CombinatorialCodes.jl#L1-L5' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.CombinatorialCode' href='#Simplicial.CombinatorialCode'>#</a>
 <strong><code>Simplicial.CombinatorialCode</code></strong> &mdash; <em>Type</em>.</p>
 <pre><code>CombinatorialCode{T&lt;:Integer}
@@ -171,14 +171,14 @@
 </code></pre>
 
 <p>Interprets rows of matrix <code>B</code> as codewords. Keyword argument <code>order</code> is either <code>rows</code> or <code>cols</code> to specify whether rows of <code>B</code> or columns of <code>B</code> should be interpreted as codewords.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CombinatorialCodes.jl#L26-L51' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CombinatorialCodes.jl#L26-L51' class='documenter-source'>source</a><br></p>
 <p><a id='Base.in-Tuple{Any,Simplicial.CombinatorialCode}' href='#Base.in-Tuple{Any,Simplicial.CombinatorialCode}'>#</a>
 <strong><code>Base.in</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>in(sigma::itr, C::CombinatorialCode)
 </code></pre>
 
 <p>True if <code>sigma</code> is a codeword in <code>C</code></p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CombinatorialCodes.jl#L108-L112' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CombinatorialCodes.jl#L108-L112' class='documenter-source'>source</a><br></p>
 <p><a id='Base.transpose-Tuple{Simplicial.CombinatorialCode}' href='#Base.transpose-Tuple{Simplicial.CombinatorialCode}'>#</a>
 <strong><code>Base.transpose</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>transpose(C::CombinatorialCode)
@@ -186,35 +186,35 @@
 
 <p>The code obtained by transposing the matrix form of a code.</p>
 <p>Usage: <code>C1 = transpose(C)</code> or <code>C1 = C'</code></p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CombinatorialCodes.jl#L238-L244' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CombinatorialCodes.jl#L238-L244' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.BitArrayOfACombinatorialCode-Tuple{Simplicial.CombinatorialCode}' href='#Simplicial.BitArrayOfACombinatorialCode-Tuple{Simplicial.CombinatorialCode}'>#</a>
 <strong><code>Simplicial.BitArrayOfACombinatorialCode</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>BitArrayOfACombinatorialCode(C)
 </code></pre>
 
 <p>!!! Deprecated     This function is an alias to <a href="./#Simplicial.matrix_form-Tuple{Simplicial.CombinatorialCode}"><code>matrix_form</code></a>, use that instead.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CombinatorialCodes.jl#L277-L282' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CombinatorialCodes.jl#L277-L282' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.add!-Tuple{Simplicial.CombinatorialCode,Any}' href='#Simplicial.add!-Tuple{Simplicial.CombinatorialCode,Any}'>#</a>
 <strong><code>Simplicial.add!</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>add!(C, sigma)
 </code></pre>
 
 <p>In-place version <a href="./#Simplicial.add-Union{Tuple{Simplicial.CombinatorialCode{T},Any}, Tuple{T}} where T"><code>add</code></a>. Returns the resulting code.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CombinatorialCodes.jl#L145-L149' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CombinatorialCodes.jl#L145-L149' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.add-Union{Tuple{Simplicial.CombinatorialCode{T},Any}, Tuple{T}} where T' href='#Simplicial.add-Union{Tuple{Simplicial.CombinatorialCode{T},Any}, Tuple{T}} where T'>#</a>
 <strong><code>Simplicial.add</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>add(C, sigma)
 </code></pre>
 
 <p>Return <code>C</code> if <code>in(sigma, C)</code>, otherwise construct a new code $C ∪ {sigma}$.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CombinatorialCodes.jl#L131-L135' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CombinatorialCodes.jl#L131-L135' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.del!-Tuple{Simplicial.CombinatorialCode,Any}' href='#Simplicial.del!-Tuple{Simplicial.CombinatorialCode,Any}'>#</a>
 <strong><code>Simplicial.del!</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>del!(C, tau)
 </code></pre>
 
 <p>In-place version of <code>del</code>. Returns the resulting code.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CombinatorialCodes.jl#L183-L187' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CombinatorialCodes.jl#L183-L187' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.del-Tuple{Simplicial.CombinatorialCode,Any}' href='#Simplicial.del-Tuple{Simplicial.CombinatorialCode,Any}'>#</a>
 <strong><code>Simplicial.del</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>del(C, tau)
@@ -222,7 +222,7 @@
 
 <p>Compute the deletion of <code>sigma</code> from <code>C</code>. Returns a new <code>CombinatorialCode</code> with the same vertex set.</p>
 <p>The deletion is defined by $del_τ(C) = {σ ∖ τ : σ ∈ C}$</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CombinatorialCodes.jl#L174-L180' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CombinatorialCodes.jl#L174-L180' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.link' href='#Simplicial.link'>#</a>
 <strong><code>Simplicial.link</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>link(code, sigma, tau=[])
@@ -230,14 +230,14 @@
 
 <p>Compute the link of the "on" set <code>sigma</code> and the "off" set <code>tau</code> in <code>code</code>, defined by</p>
 <p>$link_{σ,τ}(C) = {ρ ⊆ [n] : ρ ∩ σ = ρ ∩ τ = ∅, ρ ∪ σ ∈ C}$</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CombinatorialCodes.jl#L115-L122' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CombinatorialCodes.jl#L115-L122' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.matrix_form-Tuple{Simplicial.CombinatorialCode}' href='#Simplicial.matrix_form-Tuple{Simplicial.CombinatorialCode}'>#</a>
 <strong><code>Simplicial.matrix_form</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>matrix_form(C::CombinatorialCode)
 </code></pre>
 
 <p>A <code>BitMatrix</code> representation of a code, with rows as codewords. Order of returned codewords matches that in <code>C.words</code>; assuming no one has been messing around with <code>C</code>'s fields, these should be sorted using <code>lessequal_GrRevLex</code>.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CombinatorialCodes.jl#L203-L208' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CombinatorialCodes.jl#L203-L208' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.sparse_matrix_form-Tuple{Simplicial.CombinatorialCode}' href='#Simplicial.sparse_matrix_form-Tuple{Simplicial.CombinatorialCode}'>#</a>
 <strong><code>Simplicial.sparse_matrix_form</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>sparse_matrix_form(C::CombinatorialCode)
@@ -245,42 +245,42 @@
 
 <p>A <code>SparseMatrixCSC</code> representation of <code>C</code> with <code>Bool</code> entries; rows as codewords.</p>
 <p>Order of returned codewords matches that in <code>C.words</code>; assuming no one has been messing around with <code>C</code>'s fields, these should be sorted using <code>lessequal_GrRevLex</code>.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CombinatorialCodes.jl#L223-L231' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CombinatorialCodes.jl#L223-L231' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.vertices-Tuple{Simplicial.CombinatorialCode}' href='#Simplicial.vertices-Tuple{Simplicial.CombinatorialCode}'>#</a>
 <strong><code>Simplicial.vertices</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>vertices(C::CombinatorialCode)
 </code></pre>
 
 <p>Returns the vertex set of <code>C</code> as a <code>Set</code></p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CombinatorialCodes.jl#L101-L105' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CombinatorialCodes.jl#L101-L105' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.cham-Tuple{Simplicial.AbstractCombinatorialCode,Any}' href='#Simplicial.cham-Tuple{Simplicial.AbstractCombinatorialCode,Any}'>#</a>
 <strong><code>Simplicial.cham</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>cham(C, nu)
 </code></pre>
 
 <p>Returns a vector of tuples <code>(sigma,tau)</code> such that <code>link(C, sigma, tau)</code> is the full code on <code>nu</code></p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CodeOperations.jl#L44-L50' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CodeOperations.jl#L44-L50' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.intersection_completion-Tuple{Simplicial.AbstractCombinatorialCode}' href='#Simplicial.intersection_completion-Tuple{Simplicial.AbstractCombinatorialCode}'>#</a>
 <strong><code>Simplicial.intersection_completion</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>intersection_completion(C)
 </code></pre>
 
 <p>A new code consisting of all intersections of one or more codewords of <code>C</code>.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CodeOperations.jl#L22-L26' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CodeOperations.jl#L22-L26' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.max_intersection_completion-Tuple{Simplicial.AbstractCombinatorialCode}' href='#Simplicial.max_intersection_completion-Tuple{Simplicial.AbstractCombinatorialCode}'>#</a>
 <strong><code>Simplicial.max_intersection_completion</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>max_intersection_completion(C)
 </code></pre>
 
 <p>A new code consisting of all intersections of one or more maximal codewords of <code>C</code>.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CodeOperations.jl#L29-L33' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CodeOperations.jl#L29-L33' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.union_completion-Tuple{Simplicial.AbstractCombinatorialCode}' href='#Simplicial.union_completion-Tuple{Simplicial.AbstractCombinatorialCode}'>#</a>
 <strong><code>Simplicial.union_completion</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>union_completion(C)
 </code></pre>
 
 <p>The union-completion of a combinatorial code <code>C</code>, which is <code>C</code> together with</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CodeOperations.jl#L36-L40' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CodeOperations.jl#L36-L40' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.union_product-Tuple{Simplicial.AbstractCombinatorialCode,Simplicial.AbstractCombinatorialCode}' href='#Simplicial.union_product-Tuple{Simplicial.AbstractCombinatorialCode,Simplicial.AbstractCombinatorialCode}'>#</a>
 <strong><code>Simplicial.union_product</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>union_product(C1, C2)
@@ -289,7 +289,7 @@
 <p>Compute the union product of codes <code>C1</code> and <code>C2</code>, under the GrRevLex ordering on both codes.</p>
 <p>For $A = {a_1,...,a_m}$ a code on $[d]$ and $B = {b_1,...,b_d}$ a code on $[n]$, the union product is a code on $[n]$ defined by $A ∨ B = { ⋃_{j ∈ a_i} b_j : a_i ∈ A}$</p>
 <p>More simply, this is the code obtained from the nonzero entries of the product of the matrix forms of $A$ and $B$.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/CodeOperations.jl#L2-L14' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/CodeOperations.jl#L2-L14' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.canonical_form-Tuple{BitArray{2}}' href='#Simplicial.canonical_form-Tuple{BitArray{2}}'>#</a>
 <strong><code>Simplicial.canonical_form</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>canonical_form(C::AbstractCombinatorialCode)
@@ -297,7 +297,7 @@
 
 <p>The set of minimal psuedomonomials that generate the ideal $I_C$. See <a href="https://arxiv.org/abs/1212.4201">The Neural Ring</a>. Per the conventions of that paper, this set excludes the "boolean relations" $x_i(1-x_i)$. Returns a <code>Vector</code> of <a href="../@ref"><code>PseudoMonomial</code></a>s</p>
 <p>This is an implementation of Algorithm 1 from <a href="https://arxiv.org/abs/1511.00255">this paper</a></p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/NeuralRing.jl#L1-L11' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/NeuralRing.jl#L1-L11' class='documenter-source'>source</a><br></p>
 <p><a id='Private-methods-1'></a></p>
 <h2 id="private-methods">Private methods</h2>
 <p>To use these functions, you'll have to call <code>Simplicial.function_name()</code></p>
@@ -310,28 +310,28 @@
 
 <p>The category-theoretic product of two codes.</p>
 <p>$C × D = {c ∪ d : c ∈ C, d ∈ D}$ where the codewords of $D$ are considered as subsets of ${n+1,…,n+m}$</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/morphisms.jl#L26-L33' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/morphisms.jl#L26-L33' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.coproduct-Tuple{Simplicial.CombinatorialCode,Simplicial.CombinatorialCode}' href='#Simplicial.coproduct-Tuple{Simplicial.CombinatorialCode,Simplicial.CombinatorialCode}'>#</a>
 <strong><code>Simplicial.coproduct</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>coproduct(C, D)
 </code></pre>
 
 <p>The category-theoretic coproduct of two codes. More detailed latex definition is currently removed for compartibility reasons</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/morphisms.jl#L40-L45' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/morphisms.jl#L40-L45' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.core-Tuple{Simplicial.AbstractCombinatorialCode,Any}' href='#Simplicial.core-Tuple{Simplicial.AbstractCombinatorialCode,Any}'>#</a>
 <strong><code>Simplicial.core</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>core(C, sigma)
 </code></pre>
 
 <p>The core of <code>sigma</code> in <code>C</code>, defined by $core_C(σ) = ⋂_{τ∈Tk_C(σ)} τ$.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/morphisms.jl#L10-L14' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/morphisms.jl#L10-L14' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.delta' href='#Simplicial.delta'>#</a>
 <strong><code>Simplicial.delta</code></strong> &mdash; <em>Function</em>.</p>
 <pre><code>delta(n, k=0)
 </code></pre>
 
 <p>Returns the combinatorial code corresponding to the simplex on <code>n</code> vertices, with vertex set <code>(k+1):(k+n)</code></p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/morphisms.jl#L17-L23' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/morphisms.jl#L17-L23' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.simplexmap-Tuple{Any}' href='#Simplicial.simplexmap-Tuple{Any}'>#</a>
 <strong><code>Simplicial.simplexmap</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>simplexmap(C; check_complete=true, check_max=true)
@@ -340,21 +340,21 @@
 <p>Returns an integer <code>m</code> and array <code>T</code> of subsets such that <code>C == trunksmorphism(delta(m),T)</code>. Because checking if <code>C</code> is intersection-complete and/or checking if it has a unique maximal element is potentially time-consuming, the keyword arguments can be used to skip these checks.</p>
 <p><code>check_complete = false</code> will skip computing the intersection completion of <code>C</code> and assume <code>C</code> is already intersection-complete; no guarantee what will be returned in this case.</p>
 <p><code>check_max = false</code> will skip checking if <code>C</code> has a unique maximal codeword. Again, if <code>C</code> does not already have a unique maximal codeword, no guarantee what will be returned in this case.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/morphisms.jl#L62-L77' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/morphisms.jl#L62-L77' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.trunk-Tuple{Simplicial.AbstractCombinatorialCode,Any}' href='#Simplicial.trunk-Tuple{Simplicial.AbstractCombinatorialCode,Any}'>#</a>
 <strong><code>Simplicial.trunk</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>trunk(C, sigma)
 </code></pre>
 
 <p>The trunk of <code>sigma</code> in <code>C</code>, defined by $Tk_C(σ) = {c ∈ C : σ ⊆ c}$</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/morphisms.jl#L3-L7' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/morphisms.jl#L3-L7' class='documenter-source'>source</a><br></p>
 <p><a id='Simplicial.trunksmorphism-Tuple{Simplicial.CombinatorialCode,Any}' href='#Simplicial.trunksmorphism-Tuple{Simplicial.CombinatorialCode,Any}'>#</a>
 <strong><code>Simplicial.trunksmorphism</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>trunksmorphism(C, T)
 </code></pre>
 
 <p>The image of <code>C</code> under the morphism defined by the trunks in <code>T</code>.</p>
-<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/1b420b6051bda6ef0f9cbdea903eb54c088f4cf7/src/CombinatorialCodes/morphisms.jl#L51-L55' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/nebneuron/Simplicial.jl/blob/2b8ab05babbdc99a1c0f29c2f7936975782db694/src/CombinatorialCodes/morphisms.jl#L51-L55' class='documenter-source'>source</a><br></p>
               
             </div>
           </div>
